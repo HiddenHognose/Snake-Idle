@@ -1,0 +1,1 @@
+Hey! welcome to the snake idle page! hop on over to the website contained in the above files (or below? who knows) to download any one of the available versions! please report any bugs with either the Website itself or the latest version of the idle here in github. also, somtimes the reset screen is a seisure hazard, so if you are prone to seisures maybe dont reset?
