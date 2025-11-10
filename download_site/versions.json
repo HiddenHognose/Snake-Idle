@@ -1,0 +1,36 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2024-11-09",
+    "description": "Public release 1.0.0 - Full game with all features",
+    "filename": "snake_idle_v1.0.0.zip",
+    "size": "16.05 MB",
+    "platform": "All Platforms",
+    "changelog": [
+      "Public release 1.0.0",
+      "Full idle game mechanics",
+      "Upgrade and generator systems",
+      "Achievement system",
+      "Tutorial system",
+      "Save/load functionality",
+      "Easter egg: 'oops we lost the code'",
+      "Optimized meme images (512x512)",
+      "Complete game features"
+    ]
+  },
+  {
+    "version": "Beta_1",
+    "date": "2024-01-01",
+    "description": "Legacy version - Beta release",
+    "filename": "snake_idle_beta1.zip",
+    "size": "4.64 MB",
+    "platform": "All Platforms",
+    "legacy": true,
+    "changelog": [
+      "Beta release version",
+      "Early game implementation",
+      "Basic features included"
+    ]
+  }
+]
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Idle - Downloads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Snake Idle</h1>
+            <p class="subtitle">Hatch Your Collection!</p>
+        </header>
+
+        <main>
+            <section class="about-coder">
+                <h2>About the Coder</h2>
+                <div class="coder-content">
+                    <div class="coder-photo">
+                        <img src="{{ url_for('static', filename='coder_photo.jpeg') }}" alt="HiddenHognose">
+                    </div>
+                    <div class="coder-text">
+                        <p class="coder-greeting">Hey! My name's <strong>HiddenHognose</strong>, and I'm a small single-person game dev!</p>
+                        <p>This game (which I referred to while coding it as "snake cookie clicker") was made specifically with <strong>Emily & Ed from Snake Discovery</strong> in mind.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info">
+                <h2>System Requirements</h2>
+                <ul>
+                    <li>Python 3.8 or higher</li>
+                    <li>Pygame library</li>
+                    <li>Windows, Linux, or macOS</li>
+                </ul>
+            </section>
+
+            <section class="intro">
+                <h2>Download the Game</h2>
+                <p>Choose a version below to download and start hatching snakes!</p>
+            </section>
+
+            <section class="versions">
+                {% if versions %}
+                    {% for version in versions %}
+                    <div class="version-card {% if version.legacy %}legacy-version{% endif %}">
+                        <div class="version-header">
+                            <h3>{% if version.legacy %}Legacy: {% endif %}Version {{ version.version }}</h3>
+                            <span class="version-date">{{ version.date }}</span>
+                        </div>
+                        <div class="version-info">
+                            <p class="version-description">{{ version.description }}</p>
+                            <div class="version-details">
+                                <span class="file-size">{{ version.size }}</span>
+                                {% if version.platform %}
+                                <span class="platform">{{ version.platform }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="version-actions">
+                            <a href="{{ url_for('download', version=version.version) }}" class="download-btn">
+                                Download
+                            </a>
+                            {% if version.changelog %}
+                            <button class="changelog-btn" onclick="toggleChangelog('{{ version.version }}')">
+                                Changelog
+                            </button>
+                            {% endif %}
+                        </div>
+                        {% if version.changelog %}
+                        <div class="changelog" id="changelog-{{ version.version }}" style="display: none;">
+                            <h4>What's New:</h4>
+                            <ul>
+                                {% for change in version.changelog %}
+                                <li>{{ change }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-versions">
+                        <p>No versions available yet. Check back soon!</p>
+                    </div>
+                {% endif %}
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Snake Idle. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleChangelog(version) {
+            const changelog = document.getElementById('changelog-' + version);
+            if (changelog.style.display === 'none') {
+                changelog.style.display = 'block';
+            } else {
+                changelog.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+

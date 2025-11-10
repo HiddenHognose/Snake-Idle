@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Idle - Downloads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Snake Idle</h1>
+            <p class="subtitle">Hatch Your Collection!</p>
+        </header>
+
+        <main>
+            <section class="about-coder">
+                <h2>About the Coder</h2>
+                <div class="coder-content">
+                    <div class="coder-photo">
+                        <img src="coder_photo.jpeg" alt="HiddenHognose">
+                    </div>
+                    <div class="coder-text">
+                        <p class="coder-greeting">Hey! My name's <strong>HiddenHognose</strong>, and I'm a small single-person game dev!</p>
+                        <p>This game (which I referred to while coding it as "snake cookie clicker") was made specifically with <strong>Emily & Ed from Snake Discovery</strong> in mind.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info">
+                <h2>System Requirements</h2>
+                <ul>
+                    <li>Python 3.8 or higher</li>
+                    <li>Pygame library</li>
+                    <li>Windows, Linux, or macOS</li>
+                </ul>
+            </section>
+
+            <section class="intro">
+                <h2>Download the Game</h2>
+                <p>Choose a version below to download and start hatching snakes!</p>
+            </section>
+
+            <section class="versions">
+                                    <div class="version-card">
+                        <div class="version-header">
+                            <h3>Version 1.0.0</h3>
+                            <span class="version-date">2024-01-15</span>
+                        </div>
+                        <div class="version-info">
+                            <p class="version-description">Initial public release with full game features</p>
+                            <div class="version-details">
+                                <span class="file-size">2.5 MB</span>
+                                <span class="platform">All Platforms</span>
+                            </div>
+                        </div>
+                        <div class="version-actions">
+                            <a href="downloads/snake_idle_v1.0.0.zip" class="download-btn" download>
+                                Download
+                            </a>
+                            <button class="changelog-btn" onclick="toggleChangelog('1.0.0')">Changelog</button>
+                        </div>
+                        <div class="changelog" id="changelog-1.0.0" style="display: none;">
+                            <h4>What's New:</h4>
+                            <ul>
+                                <li>Initial release</li><li>Full idle game mechanics</li><li>Upgrade and generator systems</li><li>Achievement system</li><li>Tutorial system</li><li>Save/load functionality</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="version-card legacy-version">
+                        <div class="version-header">
+                            <h3>Legacy: Version Beta_1</h3>
+                            <span class="version-date">2024-01-01</span>
+                        </div>
+                        <div class="version-info">
+                            <p class="version-description">Legacy version - Beta release</p>
+                            <div class="version-details">
+                                <span class="file-size">4.64 MB</span>
+                                <span class="platform">All Platforms</span>
+                            </div>
+                        </div>
+                        <div class="version-actions">
+                            <a href="downloads/snake_idle_beta1.zip" class="download-btn" download>
+                                Download
+                            </a>
+                            <button class="changelog-btn" onclick="toggleChangelog('Beta_1')">Changelog</button>
+                        </div>
+                        <div class="changelog" id="changelog-Beta_1" style="display: none;">
+                            <h4>What's New:</h4>
+                            <ul>
+                                <li>Beta release version</li><li>Early game implementation</li><li>Basic features included</li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Snake Idle. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleChangelog(version) {
+            const changelog = document.getElementById('changelog-' + version);
+            if (changelog.style.display === 'none') {
+                changelog.style.display = 'block';
+            } else {
+                changelog.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
